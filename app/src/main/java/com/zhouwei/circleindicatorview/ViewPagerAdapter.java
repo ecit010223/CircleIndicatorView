@@ -11,7 +11,8 @@ import android.widget.ImageView;
  */
 
 public class ViewPagerAdapter extends PagerAdapter {
-    private static final int RES[] = new int[]{R.mipmap.image1,R.mipmap.image2,R.mipmap.image3,R.mipmap.image4};
+    private static final int RES[] = new int[]{R.mipmap.image1, R.mipmap.image2, R.mipmap.image3, R.mipmap.image4};
+
     @Override
     public int getCount() {
         return RES.length;
@@ -24,7 +25,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        View view = LayoutInflater.from(container.getContext()).inflate(R.layout.view_pager_item,null);
+        View view = LayoutInflater.from(container.getContext()).inflate(R.layout.view_pager_item, null);
         ImageView imageView = (ImageView) view.findViewById(R.id.item_image);
         imageView.setImageResource(RES[position]);
         container.addView(view);
@@ -33,6 +34,6 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((View)object);
+        container.removeView((View) object);
     }
 }

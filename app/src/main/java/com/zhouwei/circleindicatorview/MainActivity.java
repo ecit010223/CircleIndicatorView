@@ -12,13 +12,13 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private ViewPagerAdapter mPagerAdapter;
     private CircleIndicatorView mIndicatorView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initView();
-
     }
 
     private void initView() {
@@ -66,7 +66,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 }
